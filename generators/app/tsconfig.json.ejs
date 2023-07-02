@@ -1,0 +1,14 @@
+---
+to: <%= templateDir %>/tsconfig.json
+---
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "@nutol/ts-config-esm/tsconfig.common.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": [
+    "src"
+  ]
+}
