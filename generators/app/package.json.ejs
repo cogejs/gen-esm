@@ -29,10 +29,10 @@ to: <%= templateDir %>/package.json
     "prettier:fix": "<%- pmRun %> prettier:cli --write",
     "clean": "del 'dist' 'coverage' '.nyc_output' '*.tsbuildinfo'",
     "pretest": "<%- pmRun %> clean && <%- pmRun %> build",
-    "test": "<%- pmRun %> jest",
+    "test": "<%- pmRun %> pretest && <%- pmRun %> jest && <%- pmRun %> posttest",
     "test:ci": "node --experimental-vm-modules $(yarn bin jest)",
-    "jest": "node --experimental-vm-modules $(yarn bin jest)",
-    "posttest": "<%- pmRun %> lint"
+    "posttest": "<%- pmRun %> lint",
+    "jest": "node --experimental-vm-modules $(yarn bin jest)"
   },
   "dependencies": {
   },
