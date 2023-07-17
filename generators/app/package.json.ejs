@@ -65,5 +65,10 @@ to: <%= templateDir %>/package.json
     "dist",
     "src",
     "!*/__tests__"
-  ]
+  ],
+  "release-it": {
+    "hooks": {
+      "after:bump": "yarn"
+    }
+  },
 }

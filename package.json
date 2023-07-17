@@ -71,5 +71,10 @@
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
   },
+  "release-it": {
+    "hooks": {
+      "after:bump": "yarn"
+    }
+  },
   "packageManager": "yarn@3.6.1"
 }
